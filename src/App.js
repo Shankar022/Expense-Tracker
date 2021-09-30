@@ -1,7 +1,9 @@
+import React from "react";
 import "./App.css";
-import  Expenses  from './Components/Expenses'
+import Expenses from "./Components/Expenses/Expenses";
+import NewExpense from "./Components/Expenses/NewExpenses/NewExpense";
 
-const App =() => {
+const App = () => {
   const items = [
     {
       id: "e1",
@@ -24,12 +26,19 @@ const App =() => {
     },
   ];
 
- 
-  return (   
-    
+  // return React.createElement(
+  //   "div",
+  //   {},
+  //   React.createElement('h2', {}, 'Let\'s get started'),
+  //   React.createElement(Expenses,{items:items})
+  // );
+
+  return (
+    <div>
+      <NewExpense/>
       <Expenses items={items} />
-    
-  )
-}
+    </div>
+  );
+};
 
 export default App;
