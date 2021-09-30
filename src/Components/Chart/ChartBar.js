@@ -5,7 +5,7 @@ const ChartBar = ({ label, maxValue, value }) => {
 
     let barFilHeight = '0%';
     if (maxValue > 0) {
-        barFilHeight = Math.round((value / maxValue) * 100)+'%';
+        barFilHeight = Math.round((value / maxValue) * 100)+'0%';
     }
 
     return (
@@ -16,7 +16,8 @@ const ChartBar = ({ label, maxValue, value }) => {
             <div className='chart-bar__label'>
                 {label}
             </div>
-        </div>
+        </div>        
+
     )
 }
 

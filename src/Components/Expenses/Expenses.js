@@ -23,7 +23,7 @@ const Expenses = ({ items }) => {
           selected={year}
           onDropDownChange={getDropDownChangeData}
         />
-        <ExpensesChart expenses={filterExpenseItems} />
+        <ExpensesChart expenses={filterExpenseItems} year={year} />
         <ExpensesList items={filterExpenseItems} />
       </Card>
     </>
