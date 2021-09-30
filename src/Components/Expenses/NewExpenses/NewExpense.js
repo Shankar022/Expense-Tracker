@@ -26,7 +26,7 @@ const NewExpense = (props) => {
       )}
       {formVisible && (
         <ExpenseForm
-          onVisible={formDisablehandler}
+          onDisable={formDisablehandler}
           onSaveExpenseData={saveExpenseDataHandler}
         />
       )}

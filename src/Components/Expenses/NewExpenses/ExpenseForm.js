@@ -28,7 +28,7 @@ const ExpenseForm = (props) => {
     setTitle("");
     setAmount("");
       setDate("");
-      props.onVisible();
+      props.onDisable();
   };
 
   return (
@@ -60,7 +60,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="button" onClick={props.onVisible}>Cancel</button>
+        <button type="button" onClick={props.onDisable}>Cancel</button>
         <button type="submit" >Add Expense</button>
       </div>
     </form>
