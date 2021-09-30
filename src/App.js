@@ -24,8 +24,11 @@ const App =() => {
     },
   ];
 
-  return (
-    <Expenses items={items}/>
+ 
+  return (   
+    
+      <Expenses items={items} />
+    
   )
 }
 
