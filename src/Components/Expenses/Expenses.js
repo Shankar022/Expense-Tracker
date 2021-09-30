@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Card from "../UI/Card";
-import ExpenseItem from "../Expenses/ExpenseItem";
 import "./Expenses.css";
 import ExpensesFilter from "./NewExpenses/ExpensesFilter";
+import ExpensesList from "./ExpensesList";
 
 const Expenses = ({ items }) => {
   const [year, setYear] = useState("2020");
@@ -22,17 +22,7 @@ const Expenses = ({ items }) => {
           selected={year}
           onDropDownChange={getDropDownChangeData}
         />
-        {
-          // console.log(items),
-          filterExpenseItems.map((item) => (
-            <ExpenseItem
-              key={item.id}
-              title={item.title}
-              amount={item.amount}
-              date={item.date}
-            />
-          ))
-        }
+              <ExpensesList items={filterExpenseItems}/>
       </Card>
     </>
   );
